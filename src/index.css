@@ -6,3 +6,10 @@ body {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
 }
+a.active{
+    color: #23BE0A;
+    /* border: 2px solid #23BE0A;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 18px; */
+}

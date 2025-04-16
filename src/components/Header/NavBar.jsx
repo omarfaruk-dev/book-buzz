@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const NavBar = () => {
     return (
@@ -13,16 +14,16 @@ const NavBar = () => {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li><a>Home</a></li>
                             <li><a>Listed Books</a></li>
-                            <li><a>Pages to Read</a></li>
+                            <NavLink to='/book-details'><li><a>Pages to Read</a></li></NavLink>
                         </ul>
                     </div>
                     <a className="text-xl md:text-3xl font-bold text-[#23BE0A]">Book Buzz</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="space-x-7 menu-horizontal px-1">
-                        <li><a className=' py-2 px-4 text-lg cursor-pointer rounded-md hover:text-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-2 hover:border-[#23BE0A]'>Home</a></li>
+                        <NavLink to='/'><li><a className=' py-2 px-4 text-lg cursor-pointer rounded-md hover:text-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-2 hover:border-[#23BE0A]'>Home</a></li></NavLink>
                         <li><a className=' py-2 px-4 text-lg cursor-pointer rounded-md hover:text-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-2 hover:border-[#23BE0A]'>Listed Books</a></li>
-                        <li><a className=' py-2 px-4 text-lg cursor-pointer rounded-md hover:text-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-2 hover:border-[#23BE0A]'>Pages to Read</a></li>
+                        <NavLink to='/book-details/1'><li><a className=' py-2 px-4 text-lg cursor-pointer rounded-md hover:text-[#23BE0A] hover:bg-transparent border-2 border-transparent hover:border-2 hover:border-[#23BE0A]'>Pages to Read</a></li></NavLink>
                     </ul>
                 </div>
                 <div className="space-x-3 navbar-end">
