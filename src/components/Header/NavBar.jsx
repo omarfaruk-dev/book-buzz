@@ -16,7 +16,7 @@ const NavBar = () => {
                             <li><a>Pages to Read</a></li>
                         </ul>
                     </div>
-                    <a className="text-3xl font-bold text-[#23BE0A]">Book Buzz</a>
+                    <a className="text-xl md:text-3xl font-bold text-[#23BE0A]">Book Buzz</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="space-x-7 menu-horizontal px-1">
