@@ -24,4 +24,4 @@ const addToLocalStore = (id) => {
     }
 }
 
-export { addToLocalStore };
+export { addToLocalStore, getStoredBook };

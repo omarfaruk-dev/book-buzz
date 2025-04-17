@@ -1,19 +1,20 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { addToLocalStore } from '../../localStorage/LocalStorage';
+import { addToLocalStore } from '../../components/LocalStorage/LocalStorage';
+
+
 
 const BookDetails = () => {
+
     const { id } = useParams();
-    const book_Id = parseInt(id);
-    const booksData = useLoaderData();
-    const singleBookData = booksData.find(book => book.bookId === book_Id)
+    const bookId = parseInt(id);
+    const data = useLoaderData();
+    const singleBookData = data.find(book => book.bookId === bookId)
     const { image, bookName, author, category, tags, rating, review, totalPages, publisher, yearOfPublishing } = singleBookData || {};
 
-    const handleMarkAsRead =(id) => {
+    const handleMarkAsRead = (id) =>{
         addToLocalStore(id);
-
     }
-
 
     return (
         <div className='md:flex gap-10 space-y-5 md:space-y-0 my-10 px-5'>
@@ -28,7 +29,7 @@ const BookDetails = () => {
                 <div className='flex items-center gap-2 py-5 border-b border-gray-200'>
                     <h4>Tag</h4>
                     {
-                        tags.map(tag => <span className='font-medium bg-[#23BE0A0D] py-2 px-3 rounded-3xl text-[#23BE0A]'>#{tag}</span>)
+                        tags.map(tag => <span key={tag.bookId} className='font-medium bg-[#23BE0A0D] py-2 px-3 rounded-3xl text-[#23BE0A]'>#{tag}</span>)
                     }
                 </div>
                 <table className='overflow-x-auto'>

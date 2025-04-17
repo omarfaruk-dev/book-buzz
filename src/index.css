@@ -1,15 +1,2 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
-
-body {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-}
-a.active{
-    color: #23BE0A;
-    /* border: 2px solid #23BE0A;
-    padding: 4px 6px;
-    border-radius: 6px;
-    font-size: 18px; */
-}
