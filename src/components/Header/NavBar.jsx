@@ -15,6 +15,7 @@ const NavBar = () => {
                         <NavLink to='/'><li>Home</li></NavLink>
                         <NavLink to='/listed-books'><li>Listed Book</li></NavLink>
                         <NavLink to='/book-details'><li>Pages to Read</li></NavLink>
+                        <NavLink to='/dashboard'><li>Dashboard</li></NavLink>
                     </ul>
                 </div>
                 <a href='/' className="text-xl md:text-3xl font-bold text-[#23BE0A]">Book Buzz</a>
@@ -24,6 +25,7 @@ const NavBar = () => {
                     <NavLink to='/'><li>Home</li></NavLink>
                     <NavLink to='/listed-books'><li>Listed Book</li></NavLink>
                     <NavLink to='/book-details'><li>Pages to Read</li></NavLink>
+                    <NavLink to='/dashboard'><li>Dashboard</li></NavLink>
                 </ul>
             </div>
             <div className="space-x-3 navbar-end">
