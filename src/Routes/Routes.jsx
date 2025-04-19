@@ -19,21 +19,25 @@ import Dashboard from '../pages/Dashboard/Dashboard';
         {
           index: true,
           path: '/',
+          hydrateFallbackElement : <div>Loading...</div>,
           loader: ()=> fetch('booksData.json'),
           Component: Home
         },
         {
           path: '/listed-books',
+          hydrateFallbackElement : <div>Loading...</div>,
           loader: ()=> fetch('booksData.json'),
           Component: ListedBooks
         },
         {
           path: '/book-details/:id',
+          hydrateFallbackElement : <div>Loading...</div>,
           loader: ()=> fetch('booksData.json'),
           Component: BookDetails
         },
         {
           path: '/dashboard',
+          hydrateFallbackElement : <div>Loading...</div>,
           loader: ()=> fetch('booksData.json'),
           Component: Dashboard
         }

@@ -21,7 +21,7 @@ const ListedBooks = () => {
         const myReadList = data.filter((book) => convertedStoredBooks.includes(book.bookId))
         setReadList(myReadList);
 
-    }, [])
+    }, [data])
 
     const handleSort = (type) => {
         setSort(type);
@@ -38,6 +38,7 @@ const ListedBooks = () => {
             setReadList(sortedByYear)
         }
 
+        console.log(readList);
     }
 
     return (

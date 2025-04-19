@@ -29,7 +29,7 @@ const BookDetails = () => {
                 <div className='flex items-center gap-2 py-5 border-b border-gray-200'>
                     <h4>Tag</h4>
                     {
-                        tags.map(tag => <span key={tag.bookId} className='font-medium bg-[#23BE0A0D] py-2 px-3 rounded-3xl text-[#23BE0A]'>#{tag}</span>)
+                        tags.map((tag, index) => <span key={index} className='font-medium bg-[#23BE0A0D] py-2 px-3 rounded-3xl text-[#23BE0A]'>#{tag}</span>)
                     }
                 </div>
                 <table className='overflow-x-auto'>

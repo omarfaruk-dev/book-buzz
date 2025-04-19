@@ -14,7 +14,7 @@ const Book = ({book}) => {
                 </div>
                 <div className='mt-6 flex gap-3'>
                     {
-                        tags.map(tag => <span className='bg-[#23BE0A0D] py-2 px-3 rounded-3xl text-[#23BE0A]'>{tag}</span>)
+                        tags.map((tag, index) => <span key={index} className='bg-[#23BE0A0D] py-2 px-3 rounded-3xl text-[#23BE0A]'>{tag}</span>)
                     }
                 </div>
                 <h3 className='text-2xl font-bold leading-6 mb-4'>{bookName}</h3>
