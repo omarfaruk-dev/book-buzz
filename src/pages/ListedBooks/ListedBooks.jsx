@@ -3,7 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredBook } from '../../components/LocalStorage/LocalStorage';
 import { useLoaderData } from 'react-router';
-import Book from '../Books/Book';
+// import Book from '../Books/Book';
+import BookList from './BookList';
 
 
 const ListedBooks = () => {
@@ -22,7 +23,6 @@ const ListedBooks = () => {
         setReadList(myReadList);
 
     }, [data])
-
     const handleSort = (type) => {
         setSort(type);
         if (type === 'Pages') {
@@ -38,11 +38,10 @@ const ListedBooks = () => {
             setReadList(sortedByYear)
         }
 
-        console.log(readList);
     }
 
     return (
-        <div className='my-10'>
+        <div className='my-10 min-h-[calc(100vh-410px)]'>
             <div className='bg-gray-100 py-10 my-10 rounded-3xl'>
                 <h2 className='text-3xl font-semibold text-center'>Books</h2>
             </div>
@@ -69,9 +68,12 @@ const ListedBooks = () => {
 
                 <TabPanel>
 
-                    {
-                        readList.map(b => <Book key={b.bookId} book={b}></Book>)
-                    }
+                    <div>
+                        {
+                            readList.map(b => <BookList key={b.bookId} book={b}></BookList>)
+                            // readList.map(b => <Book key={b.bookId} book={b}></Book>)
+                        }
+                    </div>
 
                 </TabPanel>
                 <TabPanel>

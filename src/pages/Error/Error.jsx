@@ -5,7 +5,6 @@ import NavBar from '../../components/Header/NavBar';
 
 const Error = () => {
     const error = useRouteError();
-    console.log(error.error.message);
 
     return (
         <div>
